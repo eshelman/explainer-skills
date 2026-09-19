@@ -1,0 +1,18 @@
+{
+  "title": "XKCD Simple Writer Word List",
+  "version": "0.2.1",
+  "author": "Randall Munroe / xkcd",
+  "retrieved_utc_date": "2026-09-18",
+  "source_url": "https://xkcd.com/simplewriter/words.js",
+  "retrieved_url": "https://xkcd.com/simplewriter/words.js?cache=6f3c4ed1c04dc0b6c30d46e2ea451210",
+  "editor_url": "https://xkcd.com/simplewriter/",
+  "author_explanation_url": "https://blog.xkcd.com/2015/09/22/a-thing-explainer-word-checker/",
+  "book_url": "https://xkcd.com/thing-explainer/",
+  "source_sha256": "8705ddff1b3fc3feb3ac902e0fce763321b12ead2569bc38292e39d9ece24873",
+  "bundled_words_sha256": "fa78b7ef472d9b6ba5c0e9f7e8919e8e825d9b5c307baac28e5d4e0a1cebf5c7",
+  "raw_entries": 3634,
+  "entries_after_apostrophe_normalization": 3616,
+  "extraction": "Extract the literal window.__WORDS string, split at |, sort, and write one entry per line in UTF-8 with a final LF. Preserve every entry including curly apostrophe variants. No additions or omissions.",
+  "scope": "Official expanded spelling list for the Thing Explainer ten-hundred-word vocabulary, not 3,634 separate root words and not a reconstructed ranked list of 1,000 roots. Munroe states that word forms usually count together and that he combined multiple frequency-counting methods.",
+  "checker_policy": "Accept only exact list membership after lowercase and curly-to-straight apostrophe normalization. Split hyphenated phrases into words. Do not reproduce the online editor apostrophe-suffix bypass. Ignore only nonvisible HTTPS/HTTP Markdown link destinations. Check all labels, headings, and ordinary text. Spell numbers out; reject other visible symbols outside the documented punctuation set."
+}
