@@ -1,0 +1,14 @@
+interface:
+  display_name: Thing Explainer
+  short_description: Explain big ideas with Munroe’s simple-word list
+  default_prompt: Use $thing-explainer to explain this with only the bundled simple
+    words, keeping it clear, vivid, and accurate.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true
