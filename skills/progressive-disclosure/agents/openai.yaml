@@ -1,0 +1,14 @@
+interface:
+  display_name: Progressive Disclosure
+  short_description: Explain dense ideas from intuition to expert detail
+  default_prompt: Use $progressive-disclosure to explain this material from ELI5 through
+    ELI25.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true
