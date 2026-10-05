@@ -27,7 +27,7 @@ Read [references/visual-review.md](references/visual-review.md) before planning 
 2. Choose one central question and the simplest scene that lets the reader SEE its answer. Use a cutaway, a before/after pair, or two to three small scenes when useful.
 3. Describe what each object DOES before writing its label. Draw the object or an explicitly marked analogy: e.g., workers waiting at a doorway, slips of paper moving between readers, a pot over a flame, or a telescope pointed at a path of light. An object-shaped drawing is not evidence that the analogy is true.
 4. Apply the label-hiding test: with every word hidden, the drawing must still communicate a meaningful action, relationship, comparison, or obstruction. Labeled rectangles connected by arrows usually fail this test.
-5. Prefer a few short callouts close to objects over section headings and paragraphs. Aim for under eighty visible words on a single image; reduce scope or split into panels when the subject needs more. Do not overcompress into misleading labels.
+5. Prefer a few short callouts close to objects over section headings and paragraphs. Aim for under eighty visible words on a single image; reduce scope or split into panels when the subject needs more. This target applies only to image lettering, not the accompanying explanation. Do not overcompress into misleading labels.
 6. Write the exact text list and run the vocabulary checker before rendering. Keep the technical fact plan out of the image-text file.
 
 ## Required visual language
@@ -57,7 +57,7 @@ If no available renderer can meet the requested style, explain the limitation in
 2. Open the ACTUAL rendered image. If the file is missing, retrieve the real output before proceeding. If you cannot inspect it, mark the review blocked; a successful script exit, SVG source, OCR, or another agent's unsupported assurance cannot substitute for visual inspection.
 3. Inspect the whole composition and the labels at the intended display size, including phone-size readability when relevant. Check detailed crops as needed. If a reduced preview is unreadable, enlarge lettering, shorten text, or split the scene.
 4. Request an independent reviewer agent whenever available. Give it the image, user request, fact plan with sources, checked text files, and visual-review rubric. Do not pass the generator's self-rating, desired verdict, or an explanation of why it ought to pass. Require the reviewer to inspect pixels and return per-gate evidence. If delegation is unavailable, run a distinct self-review pass with the same evidence requirements and record that limitation; never claim independence.
-5. Use the rubric in references/visual-review.md. Style, correctness, legibility, and vocabulary are separate PASS/FAIL/BLOCKED gates. Require concrete observations tied to the current image. A strong gate cannot compensate for a failed gate.
+5. Use the rubric in references/visual-review.md. Style, correctness, legibility, and vocabulary are separate PASS/FAIL/BLOCKED gates; also check the accompanying explanation against the delivery contract below. Require concrete observations tied to the current image and prose. A strong gate cannot compensate for a failed gate or missing explanation.
 6. Transcribe the lettering actually visible, compare it with the planned text, and check the transcription. OCR can assist but cannot certify spelling or legibility. Unreadable text is a failure, not permission to assume the intended label.
 7. On failure, name the visible defect, revise its cause, and render again. For a style failure, redesign the scene rather than merely changing a font or color. Recheck all gates after every revision.
 8. Use a default budget of four candidates. Return only a candidate that passed ALL gates. If the budget is exhausted, simplify and test again only when a concrete fix is evident; otherwise report the unmet requirement in allowed words. Never label the least-bad failing draft as completed. Show a failing draft only if the user explicitly asks.
@@ -67,7 +67,16 @@ Do not include internal reports or scores in the finished explanation unless ask
 
 ## Deliver
 
-Return the passing image with a brief checked caption or explanation when useful. State any meaningful conceptual limit in allowed words. Keep text and drawing mutually consistent. Do not add unchecked delivery prose after the final vocabulary check.
+Return the passing image AND an accompanying explanation by default, not just an optional caption. Unless the user explicitly asks for a different format, include these text elements in order:
+
+1. **Title:** a short, clear title in allowed words, written as text outside the image even if the picture also has a title.
+2. **Introduction:** one complete sentence introducing the subject or central question.
+3. **Fundamentals:** one to three complete sentences explaining the core mechanism or relationship and how to read the picture. Use enough detail for a new reader to follow why or how it works; do not merely repeat labels or list what is drawn.
+4. **Conclusion:** one complete closing sentence giving the main takeaway or its significance.
+
+Use short paragraphs rather than explicit "Introduction", "Fundamentals", or "Conclusion" headings. The result is a title plus three to five explanatory sentences; do not force the body into a one-line caption, fragments, or semicolon-packed sentences. Keep the full explanation outside the image so that readable image labels can remain brief. The image may appear before or between the prose blocks as the platform permits, but it cannot replace them; respect platform-specific display rules.
+
+Include meaningful conceptual limits in the fundamentals or conclusion without sacrificing the explanation. Keep text and drawing mutually consistent; do not let an analogy imply a literal mechanism. Check the title and every prose sentence with the same bundled vocabulary checker, and review both meaning and the required structure before delivery. Do not add unchecked delivery prose after the final vocabulary check.
 
 ## Commands
 

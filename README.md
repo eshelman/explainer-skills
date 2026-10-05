@@ -44,6 +44,8 @@ Then try one of the prompts below.
 
 ### Thing Explainer Diagrams
 
+Each picture comes with a title, an introductory sentence, one to three sentences explaining the fundamentals, and a closing conclusion, all using the same simple-word rules.
+
 - Use the `thing-explainer-diagrams` skill on mixture of experts.
 - Use the `thing-explainer-diagrams` skill on how a transformer operates.
 - Use the `thing-explainer-diagrams` skill on dark matter.

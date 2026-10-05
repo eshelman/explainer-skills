@@ -51,6 +51,16 @@ Do not equate "unpolished" with unreadable, careless, or factually vague.
 
 ## Review response
 
+Before delivery, also check the accompanying explanation (unless the user explicitly
+requested a different format): a text title outside the image, one introductory
+sentence, one to three sentences explaining the fundamentals, and one closing
+conclusion sentence. Require complete sentences that teach the core mechanism or
+relationship, not fragments or a list of image labels. Check accuracy, agreement
+with the drawing, relevant limits, and vocabulary across the whole explanation.
+A passing picture with an absent or caption-only explanation is not a complete
+delivery. For an explicitly scoped image-only audit, mark prose not assessed and
+do not claim the complete delivery passed.
+
 Return a short internal report with:
 
 - artifact identity: exact path/handle and SHA-256 when locally available;
@@ -58,8 +68,11 @@ Return a short internal report with:
 - each gate: PASS, FAIL, or BLOCKED, with concrete observations;
 - label-hiding test: one sentence describing what the drawing communicates;
 - actual image transcription and any discrepancies;
+- accompanying explanation: PASS, FAIL, or BLOCKED, with sentence counts and any
+  content or vocabulary defects (or not assessed for an image-only audit);
 - required fixes, ordered by severity;
-- overall: PASS only if every gate passed on this exact artifact.
+- overall: PASS only if every gate and the required accompanying explanation passed
+  on this exact artifact and text; clearly label image-only audit results as such.
 
 An unchecked or unviewable gate is BLOCKED. Do not average gates or write "all pass"
 without image-specific evidence. The generator must revise any failure and obtain a
