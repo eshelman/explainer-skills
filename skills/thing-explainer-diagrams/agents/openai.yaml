@@ -1,0 +1,14 @@
+interface:
+  display_name: Thing Explainer Diagrams
+  short_description: Draw hard ideas with small words and black ink
+  default_prompt: Use $thing-explainer-diagrams to draw this in black ink with small
+    words.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

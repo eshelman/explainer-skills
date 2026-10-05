@@ -16,6 +16,7 @@ Then try one of the prompts below.
 
 - [`thing-explainer`](skills/thing-explainer/): explains hard things with small words and checks each word.
 - [`progressive-disclosure`](skills/progressive-disclosure/): explains dense scientific, technical, and philosophical material through progressively deeper layers.
+- [`thing-explainer-diagrams`](skills/thing-explainer-diagrams/): explains hard subjects with original black-ink schematic drawings, simple labels, and a rendered-image review loop.
 
 ## Try it
 
@@ -41,14 +42,22 @@ Then try one of the prompts below.
 - Use the `progressive-disclosure` skill on Goodhart's law.
 - Use the `progressive-disclosure` skill on the ontology of thought.
 
+### Thing Explainer Diagrams
+
+- Use the `thing-explainer-diagrams` skill on mixture of experts.
+- Use the `thing-explainer-diagrams` skill on how a transformer operates.
+- Use the `thing-explainer-diagrams` skill on dark matter.
+- Use the `thing-explainer-diagrams` skill on why adding more cooks may not make dinner ready sooner.
+
 ## Repository layout
 
 Add future skills as separate directories under `skills/`:
 
 ```text
 skills/
+├── progressive-disclosure/
 ├── thing-explainer/
-└── another-skill/
+└── thing-explainer-diagrams/
 ```
 
 Each skill directory should contain its own `SKILL.md` and any supporting

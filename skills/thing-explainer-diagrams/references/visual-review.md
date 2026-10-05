@@ -1,0 +1,82 @@
+# Visual review contract
+
+Judge an original XKCD-inspired explanatory drawing, with Thing Explainer words.
+Inspect the image itself before judging it. Do not infer success from file creation,
+source code, the prompt, or the generator's report. Be willing to reject it.
+
+## Style: all required
+
+- Thin black ink and generous white space dominate; lettering feels drawn by hand.
+- At least one recognizable scene, object interaction, cutaway, or spatial mechanism
+  teaches the subject. Objects can be simple, but not interchangeable labeled cards.
+- With labels hidden, there is still a meaningful action or relationship to describe.
+- The composition reads as an explanatory cartoon or annotated drawing at a glance.
+  Small relevant plots or boxes are fine; a business infographic with jitter is not.
+- No corporate heading system, decorative palette, large filled cards, dashboard
+  layout, or decision-flow template dominates the image.
+
+Do not require stick figures in an explanation about stars, molecules, or machines.
+When people appear, their actions must help explain. Do not reward decorative people.
+Do not equate "unpolished" with unreadable, careless, or factually vague.
+
+## Correctness: all required
+
+- The mechanism and direction of each meaningful relationship match the fact plan.
+- Geometry and grouping do not introduce a false causal claim or numerical precision.
+- Distinguish literal mechanism from analogy; a pictured door is not a literal part
+  of a computer unless the explanation is actually about a physical door.
+- Distinguish known facts, proposed uses, hopes, and unknowns where relevant.
+- Reject a scientifically false claim even if the picture is excellent.
+- If sources or necessary topic context are absent, mark this gate BLOCKED instead
+  of guessing. A style-only audit may leave other gates BLOCKED.
+
+## Legibility: all required
+
+- Read every word in the delivered image; inspect small-screen scale as applicable.
+- No clipping, collisions, ambiguous arrow endpoints, tiny caveats, or faint text.
+- Handwriting is coherent and easy to read, not pseudo-text or merely a tiny accent.
+- Reading order is evident, and objects retain recognizable shapes.
+- If text requires heavy zoom, reduce the amount of text or split the panels.
+- Inspect a whole-image preview at about 390 pixels wide for phone delivery.
+  Aim for the smallest lettering to read like roughly fourteen-pixel text there;
+  a magnified crop alone cannot clear a small-screen failure.
+
+## Vocabulary: all required
+
+- Transcribe every visible word, including stray marks that look like lettering.
+- Compare the transcription with the approved text list; report missing, extra, or
+  altered words. Natural line breaks may differ without changing meaning.
+- Run the bundled checker on actual text, captions, and accompanying explanation.
+- Do not assume a correct text plan guarantees correct rendered lettering.
+
+## Review response
+
+Return a short internal report with:
+
+- artifact identity: exact path/handle and SHA-256 when locally available;
+- inspected: yes/no and how you viewed it;
+- each gate: PASS, FAIL, or BLOCKED, with concrete observations;
+- label-hiding test: one sentence describing what the drawing communicates;
+- actual image transcription and any discrepancies;
+- required fixes, ordered by severity;
+- overall: PASS only if every gate passed on this exact artifact.
+
+An unchecked or unviewable gate is BLOCKED. Do not average gates or write "all pass"
+without image-specific evidence. The generator must revise any failure and obtain a
+fresh review. Four attempts is a work budget, not permission to ship a failure.
+
+## Calibration examples
+
+These are behavioral distinctions, not templates to copy.
+
+- A tall white page with green section markers, bold sans-serif headings, pale
+  rounded boxes, bar charts, decision diamonds, and paragraphs fails STYLE even
+  if some borders are uneven and every word is allowed.
+- A line of actual drawn workers carrying pieces toward a doorway, with the front
+  worker visibly blocking entry and a hand-lettered note nearby, can pass STYLE.
+  Still check that the doorway's role is an honest analogy and that labels are readable.
+- A lovely pencil sketch with unreadable labels fails LEGIBILITY.
+- A monochrome drawing with the wrong arrow direction fails CORRECTNESS.
+- A correctly drawn mechanism with one forbidden caption word fails VOCABULARY.
+- A schematic with no people may pass STYLE through meaningful drawn objects and
+  annotation. Do not add a stick figure just to tick a box.
