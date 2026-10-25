@@ -1,14 +1,13 @@
 interface:
-  display_name: Thing Explainer Diagrams
-  short_description: Draw hard ideas with small words and black ink
-  default_prompt: Use $thing-explainer-diagrams to draw this in black ink with small
-    words.
-  icon_small: assets/icon.svg
-  icon_large: assets/icon.svg
+  display_name: "Thing Explainer Diagrams v2"
+  short_description: "Research diagrams with clear terms and visual review"
+  default_prompt: "Use $thing-explainer-diagrams in research mode to explain this with a black-ink diagram and defined technical terms."
+  icon_small: "assets/icon.svg"
+  icon_large: "assets/icon.svg"
 policy:
   products:
-  - chatgpt
-  - codex
-  - api
-  - atlas
+  - "chatgpt"
+  - "codex"
+  - "api"
+  - "atlas"
   allow_implicit_invocation: true

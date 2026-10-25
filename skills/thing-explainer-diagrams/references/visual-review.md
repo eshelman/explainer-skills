@@ -1,6 +1,7 @@
 # Visual review contract
 
-Judge an original XKCD-inspired explanatory drawing, with Thing Explainer words.
+Judge an original XKCD-inspired explanatory drawing under the selected Thing
+Explainer v2 mode: research by default, undergraduate-strict or classic on request.
 Inspect the image itself before judging it. Do not infer success from file creation,
 source code, the prompt, or the generator's report. Be willing to reject it.
 
@@ -27,6 +28,10 @@ Do not equate "unpolished" with unreadable, careless, or factually vague.
   of a computer unless the explanation is actually about a physical door.
 - Distinguish known facts, proposed uses, hopes, and unknowns where relevant.
 - Reject a scientifically false claim even if the picture is excellent.
+- Check that technical terms retain their scientific meaning and that definitions
+  teach the relevant distinction. Explain specialist senses of familiar core words.
+- Check quantities, units, equations, symbol meanings and assumptions against the
+  fact plan. A lexical pass does not verify mathematics or a causal claim.
 - If sources or necessary topic context are absent, mark this gate BLOCKED instead
   of guessing. A style-only audit may leave other gates BLOCKED.
 
@@ -46,7 +51,18 @@ Do not equate "unpolished" with unreadable, careless, or factually vague.
 - Transcribe every visible word, including stray marks that look like lettering.
 - Compare the transcription with the approved text list; report missing, extra, or
   altered words. Natural line breaks may differ without changing meaning.
-- Run the bundled checker on actual text, captions, and accompanying explanation.
+- Record the mode. Research uses the fixed 15,000-lemma core plus necessary defined
+  topic terms and explained notation; undergraduate-strict rejects topic-term
+  exceptions; classic uses the original list and rejects term/symbol manifests.
+- Run the bundled checker independently on the actual image transcription and
+  complete accompanying explanation, with only the manifests used on each surface.
+- Verify that image terms have their canonical form and exact core-only definitions
+  visibly near first use in the image, not only in the prose or alt text. Check the
+  250-character definition placement rule and actual spatial proximity. Repeated
+  terms do not need repeated definitions within one surface.
+- Require readable symbol meanings on each surface where symbols occur; inspect
+  units, acronyms and familiar words with specialist senses even if accepted.
+- Do not silently add definitions to the transcript that are absent from the image.
 - Do not assume a correct text plan guarantees correct rendered lettering.
 
 ## Review response
@@ -68,6 +84,7 @@ Return a short internal report with:
 - each gate: PASS, FAIL, or BLOCKED, with concrete observations;
 - label-hiding test: one sentence describing what the drawing communicates;
 - actual image transcription and any discrepancies;
+- selected mode, per-surface checker results, and term-definition/symbol checks;
 - accompanying explanation: PASS, FAIL, or BLOCKED, with sentence counts and any
   content or vocabulary defects (or not assessed for an image-only audit);
 - required fixes, ordered by severity;
@@ -91,5 +108,10 @@ These are behavioral distinctions, not templates to copy.
 - A lovely pencil sketch with unreadable labels fails LEGIBILITY.
 - A monochrome drawing with the wrong arrow direction fails CORRECTNESS.
 - A correctly drawn mechanism with one forbidden caption word fails VOCABULARY.
+- A research-mode picture labeled with an undeclared specialist term fails
+  VOCABULARY even if the accompanying prose explains it. A declared term with its
+  readable adjacent definition can pass; research vocabulary is not a style failure.
+- A definition that passes lexical checks but misstates the science fails CORRECTNESS.
+- A tiny definition fails LEGIBILITY even when its text passes the checker.
 - A schematic with no people may pass STYLE through meaningful drawn objects and
   annotation. Do not add a stick figure just to tick a box.

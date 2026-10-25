@@ -16,7 +16,7 @@ Then try one of the prompts below.
 
 - [`thing-explainer`](skills/thing-explainer/): explains hard things with small words and checks each word.
 - [`progressive-disclosure`](skills/progressive-disclosure/): explains dense scientific, technical, and philosophical material through progressively deeper layers.
-- [`thing-explainer-diagrams`](skills/thing-explainer-diagrams/): explains hard subjects with original black-ink schematic drawings, simple labels, and a rendered-image review loop.
+- [`thing-explainer-diagrams`](skills/thing-explainer-diagrams/): v2 explains science with original black-ink schematic drawings, a 15,000-lemma vocabulary, defined technical terms, and a rendered-image review loop; research mode is the default.
 
 ## Try it
 
@@ -44,11 +44,17 @@ Then try one of the prompts below.
 
 ### Thing Explainer Diagrams
 
-Each picture comes with a title, an introductory sentence, one to three sentences explaining the fundamentals, and a closing conclusion, all using the same simple-word rules.
+Research mode uses the embedded 15,000-lemma general undergraduate core from Thing Explainer v2, with necessary specialist terms defined near first use and mathematical notation explained. Image labels and accompanying prose are checked separately; a technical label needs a readable definition in the image itself. The skill is self-contained and does not require the text-only skill to be installed.
+
+Each picture comes with a title, an introductory sentence, one to three sentences explaining the fundamentals, and a closing conclusion. Style, scientific correctness, phone-size legibility, vocabulary, and the accompanying explanation are reviewed before delivery.
+
+Request **undergraduate-strict** mode for the core vocabulary without specialist-term exceptions, or **classic** mode for the original ten-hundred-word restriction. The broader core is provisional, not a measured guarantee of undergraduate comprehension; its provenance and reuse notices are bundled with the skill.
 
 - Use the `thing-explainer-diagrams` skill on mixture of experts.
 - Use the `thing-explainer-diagrams` skill on how a transformer operates.
 - Use the `thing-explainer-diagrams` skill on dark matter.
+- Use the `thing-explainer-diagrams` skill on autoencoders.
+- Use the `thing-explainer-diagrams` skill in classic mode on dark matter.
 - Use the `thing-explainer-diagrams` skill on why adding more cooks may not make dinner ready sooner.
 
 ## Repository layout

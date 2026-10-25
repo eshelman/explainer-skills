@@ -1,25 +1,52 @@
 ---
 name: thing-explainer-diagrams
-description: Explain hard subjects through original XKCD-inspired black-ink schematic drawings and short hand-lettered labels, using the complete Thing Explainer word list. Use for Thing Explainer diagrams, illustrated explanations, and explanatory comics. Require rendered-image review for style, correctness, legibility, and vocabulary before delivery.
+description: Explain science and technology through original XKCD-inspired black-ink schematic drawings and structured prose. Default to research mode with an embedded 15,000-lemma undergraduate vocabulary, defined specialist terms, and explained notation. Use for Thing Explainer diagrams, illustrated explanations, and explanatory comics; preserve explicit classic and undergraduate-strict modes. Require rendered-image review for style, correctness, legibility, and vocabulary before delivery.
 ---
 
-# Thing Explainer Diagrams
+# Thing Explainer Diagrams — version 2
 
-Create an original explanatory drawing with the visual grammar the user requested from XKCD and Thing Explainer: thin black ink on white, simple recognizable objects, expressive stick figures when useful, hand-lettered notes, and drawings that explain through action and spatial relationships. Preserve causal accuracy and the complete simple-word constraint.
+Create an original explanatory drawing with thin black ink on white, simple recognizable objects, expressive stick figures when useful, hand-lettered notes, and drawings that explain through action and spatial relationships. Preserve scientific depth, causal accuracy, and the selected vocabulary contract. Use familiar adult language; do not replace necessary concepts with vague substitute names.
 
 Treat style as a requirement, not optional decoration. A corporate infographic with wobbly boxes fails. A generic flowchart with a stick figure pasted beside it also fails. Do not copy a published panel, trace an existing composition, sign as the artist, or imply authorship by Randall Munroe.
 
-Read [references/visual-review.md](references/visual-review.md) before planning and before reviewing. The complete vocabulary is bundled; no other skill must be installed.
+Read [references/visual-review.md](references/visual-review.md) before planning and before reviewing. The vocabulary and checker are bundled from Thing Explainer v2; no other skill must be installed.
 
-## Vocabulary contract
+## Choose a mode
 
-- Read the entire [references/words.txt](references/words.txt) before drafting. It is the sole allowlist: all 3,634 official expanded spellings, including inflections; 3,616 entries after apostrophe normalization. See [references/source.json](references/source.json) for provenance.
-- Apply it to ALL authored reader-facing explanation text: image lettering, title, dialogue, captions, alt text, accompanying prose, caveats, source-link labels, progress notes, and final sign-off. Never move jargon outside the image to evade the rule. Internal plans, code, reviewer reports, and this skill's instructions are exempt.
-- Use exact list membership after lowercasing and normalizing apostrophes. Do not infer stems, add inflections, disguise a word through hyphens, or use digits, formulas, acronyms, or technical names as an escape. Draw arrows and objects normally; the text checker need not accept drawing geometry.
-- Use short functional names that preserve meaning. Do not turn everything into unnamed boxes. Spell numbers with allowed words.
-- Keep a plain UTF-8 file containing only the exact intended visible image text, in reading order. Keep any accompanying prose in a separate file. Validate both with the bundled checker before rendering and after every text revision.
-- Use simple Markdown evidence links such as [Read more here](https://example.org). Only their nonvisible destinations are exempt. Source-supported limits must survive simplification.
-- Never weaken the list or checker. If necessary detail cannot be conveyed honestly with these words, narrow the explanation or state the limitation in allowed words.
+- **Research (default):** use the embedded 15,000-lemma Undergraduate General core, explicitly defined necessary topic terms, and explained notation. Aim at an English-fluent undergraduate outside the specialty; build prerequisites rather than deleting graduate or frontier distinctions. Do not infer classic mode from the words Thing Explainer, XKCD, or a request for a simple drawing.
+- **Undergraduate strict:** when asked to use only the new core, use `--mode undergraduate-strict` without topic-term exceptions. Retain ordinary numbers and explained notation; report genuine vocabulary limits.
+- **Classic:** only when explicitly requested, use `--mode classic` and the original ten-hundred-word restriction. Read the entire [references/words.txt](references/words.txt); keep its 3,634 official spellings (3,616 normalized entries) and [references/source.json](references/source.json) unchanged. Spell numbers out; reject term and symbol manifests, unlisted derivatives, and arbitrary possessive suffixes.
+
+## Vocabulary and terminology contract
+
+Read [references/undergraduate-core.md](references/undergraduate-core.md) on first use and consult [references/sense-notes.json](references/sense-notes.json) for specialist senses of familiar words. Use [references/core-15000.tsv](references/core-15000.tsv) as the sole general vocabulary in research and undergraduate-strict modes. It has exactly 15,000 unique canonical headwords and enumerated accepted forms; do not infer derivatives or authorize whole word families. Use `--lookup` rather than loading the whole table into context. Counts, hashes and provenance are in [references/core-manifest.json](references/core-manifest.json); preserve [references/core-license.txt](references/core-license.txt). This is provisional editorial common ground, not a measured guarantee of undergraduate comprehension.
+
+Apply the selected mode to all authored reader-facing explanation text: image lettering, titles, dialogue, captions, alt text, prose, caveats, source labels, progress notes, and closing text. Internal plans, code, manifests, reviewer reports and these instructions are exempt. The constraint does not extend to unrelated later tasks. Use genuine platform citations or ordinary Markdown source links; only hidden URL destinations and valid citation metadata are exempt, not their visible labels. Never weaken the vocabulary or checker to obtain a pass.
+
+In research mode, retain the scientific names readers need to connect to the literature. Expand unfamiliar acronyms and explain specialist senses even when their spellings pass (for example attention, normal, bias or confidence). Introduce only terms needed for this explanation. Create a per-output term manifest outside the skill directory:
+
+~~~json
+{"terms":[{"term":"stochastic","forms":["stochastic"],"definition":"having outcomes that include random variation","reason":"Needed to distinguish random outcomes from a fixed outcome."}]}
+~~~
+
+Require all four fields. Enumerate accepted word or complete-phrase forms, including the canonical term. Each definition must use at least three core words (numeric literals are allowed), without undeclared specialist dependencies. Include the canonical term and its exact definition in the delivered text. After case, whitespace and Markdown-emphasis normalization, the definition must start within 250 visible characters after the first accepted term-form occurrence, or finish within 250 characters before it. A distant glossary is insufficient. The checker establishes placement and vocabulary, not whether the definition is scientifically adequate.
+
+In research and undergraduate-strict modes, preserve useful numbers, units, equations and notation. Define symbols and explain the relationship in words; use an optional manifest such as:
+
+~~~json
+{"symbols":[{"symbol":"x","meaning":"the measured value"}]}
+~~~
+
+Use each symbol and its exact core-only meaning in the output. Symbols are single case-sensitive Latin/Greek letters or approved TeX Greek commands. Units and function names must be core words or defined topic terms (the latter only in research mode). Familiar single letters used as variables still need meaning review. Mathematical syntax is not an exemption for prose or arbitrary TeX. Draw mathematical relationships with deterministic tools when precision matters.
+
+## Check the picture and prose as separate reading surfaces
+
+- Keep exact intended image text in reading order in `image-text.txt`, and the complete accompanying text (including its title, alt text and source labels) in `prose.md`, outside the skill directory. The files must represent delivered text, not include hidden definitions merely to satisfy the checker.
+- Check each surface independently before rendering and after every revision, using the selected mode and only the declarations used on that surface. Keep separate image/prose term and symbol manifests when their contents differ. Keep shared definitions consistent.
+- A specialist name in an image title or label needs its definition visibly in that image near first use. Put symbol meanings in a nearby readable legend or callout. A definition solely in the caption, alt text, or prose cannot rescue an unexplained image label, and an image definition cannot rescue unexplained prose.
+- Review spatial proximity as well as the checker's character-distance rule: a plausible linear transcription can hide a confusing visual layout. If a full definition cannot fit legibly, use an accurate core-word label in the image and introduce the specialist name in the prose, or split the image into smaller self-contained panels. Do not shrink definitions to unreadable footnotes.
+- After rendering, transcribe actual visible lettering, symbols, numbers and units; check that transcription with the image manifests. Compare it to the approved text plan. OCR can assist, but not replace reading the image.
+- Check the whole final accompanying text after all edits. No unchecked additions. Runtime checking uses the Python standard library and bundled resources only. If execution or core resources are unavailable, report the limitation; do not claim a pass or substitute a remembered list.
 
 ## Plan a drawing, not a page layout
 
@@ -28,7 +55,7 @@ Read [references/visual-review.md](references/visual-review.md) before planning 
 3. Describe what each object DOES before writing its label. Draw the object or an explicitly marked analogy: e.g., workers waiting at a doorway, slips of paper moving between readers, a pot over a flame, or a telescope pointed at a path of light. An object-shaped drawing is not evidence that the analogy is true.
 4. Apply the label-hiding test: with every word hidden, the drawing must still communicate a meaningful action, relationship, comparison, or obstruction. Labeled rectangles connected by arrows usually fail this test.
 5. Prefer a few short callouts close to objects over section headings and paragraphs. Aim for under eighty visible words on a single image; reduce scope or split into panels when the subject needs more. This target applies only to image lettering, not the accompanying explanation. Do not overcompress into misleading labels.
-6. Write the exact text list and run the vocabulary checker before rendering. Keep the technical fact plan out of the image-text file.
+6. Draft both reading surfaces and their necessary term/symbol declarations, then run the checker on each before rendering. Keep the technical fact plan out of the checked text. State assumptions, limits and uncertainty that matter; distinguish prediction from causation. Preserve exact quantities and units instead of replacing them with an inaccurate analogy.
 
 ## Required visual language
 
@@ -56,9 +83,9 @@ If no available renderer can meet the requested style, explain the limitation in
 1. Render a candidate; retain its exact image path or image handle and its text plan.
 2. Open the ACTUAL rendered image. If the file is missing, retrieve the real output before proceeding. If you cannot inspect it, mark the review blocked; a successful script exit, SVG source, OCR, or another agent's unsupported assurance cannot substitute for visual inspection.
 3. Inspect the whole composition and the labels at the intended display size, including phone-size readability when relevant. Check detailed crops as needed. If a reduced preview is unreadable, enlarge lettering, shorten text, or split the scene.
-4. Request an independent reviewer agent whenever available. Give it the image, user request, fact plan with sources, checked text files, and visual-review rubric. Do not pass the generator's self-rating, desired verdict, or an explanation of why it ought to pass. Require the reviewer to inspect pixels and return per-gate evidence. If delegation is unavailable, run a distinct self-review pass with the same evidence requirements and record that limitation; never claim independence.
+4. Request an independent reviewer agent whenever available. Give it the image, user request, fact plan with sources, selected mode, text files, per-surface term/symbol manifests, and visual-review rubric. Do not pass the generator's self-rating, desired verdict, or an explanation of why it ought to pass. Require the reviewer to inspect pixels and return per-gate evidence. If delegation is unavailable, run a distinct self-review pass with the same evidence requirements and record that limitation; never claim independence.
 5. Use the rubric in references/visual-review.md. Style, correctness, legibility, and vocabulary are separate PASS/FAIL/BLOCKED gates; also check the accompanying explanation against the delivery contract below. Require concrete observations tied to the current image and prose. A strong gate cannot compensate for a failed gate or missing explanation.
-6. Transcribe the lettering actually visible, compare it with the planned text, and check the transcription. OCR can assist but cannot certify spelling or legibility. Unreadable text is a failure, not permission to assume the intended label.
+6. Transcribe the lettering and notation actually visible, compare it with the planned text, and check each reading surface independently under the selected mode. Review actual term-definition proximity and symbol meanings. OCR cannot certify spelling or legibility. Unreadable text is a failure, not permission to assume the intended label.
 7. On failure, name the visible defect, revise its cause, and render again. For a style failure, redesign the scene rather than merely changing a font or color. Recheck all gates after every revision.
 8. Use a default budget of four candidates. Return only a candidate that passed ALL gates. If the budget is exhausted, simplify and test again only when a concrete fix is evident; otherwise report the unmet requirement in allowed words. Never label the least-bad failing draft as completed. Show a failing draft only if the user explicitly asks.
 9. The parent agent must open the final candidate itself, read the review findings, and resolve any contradictions. Keep a small internal record identifying the exact artifact (path plus SHA-256 for a local image), review evidence, and fixes. Any later edit invalidates that review.
@@ -76,16 +103,20 @@ Return the passing image AND an accompanying explanation by default, not just an
 
 Use short paragraphs rather than explicit "Introduction", "Fundamentals", or "Conclusion" headings. The result is a title plus three to five explanatory sentences; do not force the body into a one-line caption, fragments, or semicolon-packed sentences. Keep the full explanation outside the image so that readable image labels can remain brief. The image may appear before or between the prose blocks as the platform permits, but it cannot replace them; respect platform-specific display rules.
 
-Include meaningful conceptual limits in the fundamentals or conclusion without sacrificing the explanation. Keep text and drawing mutually consistent; do not let an analogy imply a literal mechanism. Check the title and every prose sentence with the same bundled vocabulary checker, and review both meaning and the required structure before delivery. Do not add unchecked delivery prose after the final vocabulary check.
+Include meaningful conceptual limits and necessary definitions in the fundamentals or conclusion without sacrificing the explanation. The title follows the selected mode, including nearby definitions for specialist terms. Prefer a core-word title when defining a specialist title would make the introduction awkward. Use the full three fundamentals sentences when needed; narrow the picture's scope or split into explained panels rather than overloading sentences or removing essential science. Keep text and drawing mutually consistent; do not let an analogy imply a literal mechanism. Check the title and every prose sentence with the same bundled checker, and review meaning and structure before delivery. Do not add unchecked delivery prose after the final check.
 
 ## Commands
 
 Resolve SKILL_DIR to this installed folder, which may be renamed by installation:
 
 ```bash
-python3 "$SKILL_DIR/scripts/check_words.py" --list
-python3 "$SKILL_DIR/scripts/check_words.py" /absolute/path/to/image-text.txt --json
-python3 "$SKILL_DIR/scripts/check_words.py" /absolute/path/to/caption.md --json
+python3 "$SKILL_DIR/scripts/check_words.py" --lookup inference stochastic attention
+python3 "$SKILL_DIR/scripts/check_words.py" /absolute/path/to/image-text.txt --mode research --terms /absolute/path/to/image-terms.json --symbols /absolute/path/to/image-symbols.json --json
+python3 "$SKILL_DIR/scripts/check_words.py" /absolute/path/to/prose.md --mode research --terms /absolute/path/to/prose-terms.json --symbols /absolute/path/to/prose-symbols.json --json
+python3 "$SKILL_DIR/scripts/check_words.py" /absolute/path/to/image-text.txt --mode undergraduate-strict --json
+python3 "$SKILL_DIR/scripts/check_words.py" /absolute/path/to/image-text.txt --mode classic --json
 ```
 
-The checker proves vocabulary membership, not meaning, style, or legibility. Test checker changes with scripts/test_check_words.py; never alter its acceptance rules to make an image pass.
+Omit unnecessary manifests. Repeat the chosen mode for both surfaces. Classic rejects both manifests; undergraduate-strict rejects term manifests but allows explained symbols. Omitting `--mode` selects research.
+
+The checker proves lexical membership and declared-definition placement, not meaning, style, spatial proximity, or legibility. For maintenance, run scripts/test_check_words.py and scripts/test_diagram_contract.py. The core, its manifest, curation, licenses, sense notes and scripts/check_words.py are copied unchanged from Thing Explainer v2. The pinned scripts/build_core.py is for authorized vocabulary maintenance only; never rebuild, resize or weaken the core during explanation generation.

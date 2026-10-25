@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "purpose": "Membership does not imply familiarity with every sense. Define the intended specialist meaning and required prerequisites in context; these are review prompts, not automated semantic judgments.",
+  "review_prompts": {
+    "attention": "Distinguish ordinary attention from the specific mechanism described in a computational model.",
+    "work": "Distinguish ordinary activity from a physical quantity; retain units and conditions.",
+    "energy": "Identify the relevant physical quantity, conservation assumptions, units, or metaphorical use.",
+    "field": "Specify whether this is a physical field, an algebraic structure, a data field, or an area of study.",
+    "random": "State which process or quantity is random and which probability assumptions matter.",
+    "normal": "Distinguish an ordinary reference condition from a named mathematical or statistical meaning.",
+    "bias": "Specify whether this concerns an estimator, sampling or measurement, a model assumption, or a social judgment.",
+    "model": "Distinguish a representation or predictor from an established causal mechanism.",
+    "significance": "Distinguish importance from a statistical test result; state the actual test claim.",
+    "confidence": "Specify the statistical construction and interpretation rather than equating it with personal certainty.",
+    "causal": "Explain the intervention or identification assumptions supporting the claim.",
+    "parameter": "Distinguish an adjustable model quantity from an estimated population quantity where relevant.",
+    "gradient": "Explain which quantity changes with respect to which variables and what the direction describes.",
+    "distribution": "Clarify whether this describes probabilities, observed frequencies, physical allocation, or another relation.",
+    "theory": "Distinguish a proposed conjecture, formal system, and explanatory scientific framework.",
+    "replication": "State what was repeated, what evidence was available, and the success criterion.",
+    "approximation": "Name the quantity approximated, the relevant regime, and any available error or failure condition."
+  }
+}
