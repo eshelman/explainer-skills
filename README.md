@@ -14,13 +14,17 @@ Then try one of the prompts below.
 
 ## Included skills
 
-- [`thing-explainer`](skills/thing-explainer/): explains hard things with small words and checks each word.
+- [`thing-explainer`](skills/thing-explainer/): v2 explains complex research with a checked 15,000-lemma undergraduate vocabulary, defined technical terms, and explained notation; research mode is the default.
 - [`progressive-disclosure`](skills/progressive-disclosure/): explains dense scientific, technical, and philosophical material through progressively deeper layers.
 - [`thing-explainer-diagrams`](skills/thing-explainer-diagrams/): v2 explains science with original black-ink schematic drawings, a 15,000-lemma vocabulary, defined technical terms, and a rendered-image review loop; research mode is the default.
 
 ## Try it
 
 ### Thing Explainer
+
+Thing Explainer v2 defaults to **research** mode: it uses the embedded 15,000-lemma general undergraduate core (34,154 accepted forms), introduces necessary specialist terms with definitions near first use, and permits numbers, equations, units, and explained symbols. The checker runs locally with Python’s standard library; no vocabulary download is needed.
+
+Request **undergraduate-strict** mode for core vocabulary without specialist-term exceptions, or **classic** mode for the original ten-hundred-word restriction. The broader core is provisional: it uses frequency, dictionary morphology, and editorial curation, and is not a measured guarantee of undergraduate familiarity. Provenance, licenses, and a reproducible builder are bundled with the skill.
 
 - Use the `thing-explainer` skill on mixture of experts.
 - Use the `thing-explainer` skill on KV cache.
@@ -32,6 +36,8 @@ Then try one of the prompts below.
 - Use the `thing-explainer` skill on dark energy.
 - Use the `thing-explainer` skill on DNA methylation.
 - Use the `thing-explainer` skill on why onions become sweet when cooked.
+- Use the `thing-explainer` skill in undergraduate-strict mode on autoencoders.
+- Use the `thing-explainer` skill in classic mode on dark matter.
 
 ### Progressive Disclosure
 

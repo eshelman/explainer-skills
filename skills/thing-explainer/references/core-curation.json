@@ -1,0 +1,195 @@
+{
+  "schema_version": 1,
+  "notes": "Author-curated general syntax, common lexical gaps, cross-disciplinary reasoning vocabulary, spelling variants, and technical-only exclusions. Editorial choices; not measured undergraduate familiarity scores.",
+  "general_anchors": "a an the and or but nor if as than that which what whatever whoever whose whom who where wherever when whenever while whereas although though unless until because since therefore thus hence moreover furthermore nevertheless however otherwise instead rather despite among amongst per via versus of to in on at by for from with without within into onto upon under underneath over above below beneath between through throughout across along around against during before after beyond beside besides toward towards about behind near off out up down together apart both either neither each every any all some no none nothing everything anything something someone everyone anyone somebody everybody anybody nobody myself yourself himself herself itself ourselves yourselves themselves i you he she it we they me him her us them my your his its our their mine yours hers ours theirs this these those here there yes yeah no not very quite too also just only even still already yet almost nearly enough much many more most less least few fewer several such same other another else once twice often always never sometimes usually perhaps maybe probably certainly really simply actually especially generally particularly approximately essentially relatively potentially typically respectively subsequently consequently necessarily directly indirectly overall otherwise firstly secondly finally please thank hello goodbye oh ah hey hi ok okay cannot must shall will would can could may might should ought dare need let be have do reflection scenery county lab trunk sensible cafe website software hardware internet online email smartphone cellphone laptop browser server database spreadsheet dataset network computing code program programming digital analog analogue technology mathematics arithmetic algebra geometry calculus statistic statistics probability science scientist research researcher undergraduate graduate student education learning teaching explanation explain definition define terminology vocabulary language communication understanding knowledge reasoning thought thinking concept idea argument discussion comparison connection relationship observation measurement prediction inference assumption hypothesis theory evidence mechanism process system structure function behavior model analysis synthesis simulation experiment intervention investigation evaluation assessment test trial sample population outcome result conclusion question problem solution method approach procedure protocol technique practice principle rule criterion criteria standard reference source citation context perspective implication consequence opportunity challenge limitation constraint condition boundary distinction difference similarity analogy example counterexample detail precision accuracy error bias uncertainty variability variation variance confidence significance relevance reliability validity replication reproducible repeatability objective subjective empirical qualitative quantitative descriptive analytical logical systematic consistent inconsistent ambiguous ambiguity approximate approximation optimize optimization optimal efficient efficiency effective effectiveness robust robustness stable stability dynamic dynamics feedback interaction correlation association causation causal parameter variable constant coefficient factor component framework representation abstraction generalization generalize interpret interpretation formulate formulation derive derivation infer estimate estimation likelihood distribution frequency proportion ratio percentage fraction integer decimal number quantity magnitude scale dimension unit interval range average median mean mode minimum maximum total sum product addition subtraction multiplication division increase decrease positive negative linear nonlinear parallel sequential sequence series iteration iterative recursive recursion random randomness fundamental practical theoretical physical chemical biological ecological social economic environmental ethical political historical philosophical psychological cognitive linguistic spatial temporal local global internal external dependent independent explicit implicit finite infinite discrete continuous static conditional unconditional necessary sufficient possible impossible plausible feasible evaluate validate verify falsify confirm reject support oppose contradict consistency contradiction alternative baseline benchmark performance capability capacity complexity tradeoff bottleneck threshold sensitivity specificity duration distance length width height depth volume area speed velocity acceleration force energy mass matter pressure temperature heat light sound electricity magnetic magnetism gravity wave particle atom molecule electron proton neutron cell tissue organ organism species evolution adaptation inheritance selection gene genetic protein enzyme reaction equilibrium concentration solution mixture compound element material surface density elasticity fluid solid gas liquid membrane nutrient substance resource labor center color organization favorite honor neighbor flavor defense license practice theater catalog dialog gray artifact mold tire sulfur meter liter analyze organize recognize realize characterize specialize standardize normalize minimize maximize optimize randomize model label travel cancellation learned burned dreamed spilled spelled leaped smelled thursday friday saturday sunday monday tuesday wednesday january february march april may june july august september october november december north south east west northern southern eastern western alpha beta gamma delta pi sigma tau omega dna rna gpu cpu api url pdf html sql usb tv uk usa us gdp phd mph km kg cm mm ms hz volt watt ampere joule kelvin celsius fahrenheit byte bit kilobyte megabyte gigabyte terabyte kilogram kilometer centimeter millimeter nanometer micrometer millisecond microsecond nanosecond percent thousand million billion trillion zero one two three four five six seven eight nine ten eleven twelve thirteen fourteen fifteen sixteen seventeen eighteen nineteen twenty thirty forty fifty sixty seventy eighty ninety hundred first second third fourth fifth sixth seventh eighth ninth tenth thousandth dozen pair half quarter anywhere elsewhere whichever",
+  "academic_anchors": "evidence hypothesis mechanism probability uncertainty distribution estimate constraint inference assumption approximation interaction feedback prediction parameter algorithm causal correlation replication optimization convergence empirical systematic mathematical statistical quantitative qualitative synthesis analysis interpretation evaluation validity reliability robust robustness sensitivity specificity reproducible generalization generalize abstraction representation dependency independence intervention counterexample baseline benchmark threshold confound confounding correlate causation coefficient variance heterogeneity homogeneous heterogeneous modularity scalability convergence divergence gradient equilibrium stability instability observable unobservable measurable measurement identifiable generality falsifiable falsifiability explanatory predictive descriptive objective subjective latent nonlinear recursive recursion iterative iteration approximate conditional independent dependent relevance replicable implication limitation prerequisite verify validate explain define compare distinguish preserve quantify infer predict observe assess interpret characterize formulate derive test falsify replicate reproduce optimize minimize maximize normalize standardize analyze synthesize clarify demonstrate illustrate investigate evaluate compute calculate simulate model reason learn understand",
+  "technical_only": "methylation epigenetic epigenetics eigenvector eigenvalue tensor stochastic probabilistic deterministic covariance invariant asymptotic identifiability heteroscedasticity homoscedasticity endogeneity exogeneity ergodic ergodicity isomorphism homomorphism diffeomorphism homeomorphism renormalization eigenfunction eigenbasis boson fermion hadron gluon quark lepton baryon meson neutrino graviton superconductor superfluidity superconductivity thermonuclear endoscopy neurotransmitter hepatocyte cardiomyocyte endoplasmic reticulum ribosome ribosomal spliceosome transcriptome proteome metabolome metagenome acetylation ubiquitination phosphorylation glycosylation immunohistochemistry chromatography electrophoresis cytometry photolithography lithography annealing eutectic anisotropic isotropic capacitance inductance anode cathode benzene cadmium beryllium metastasis thrombosis atherosclerosis osteoarthritis neuropathy hyperplasia adenoma lymphoma myeloma carcinoma sarcoma osteoporosis amygdala hippocampus cerebellum medulla synapse synaptic axon dendrite tokenizer tokenization autoregressive backpropagation autograd softmax logit logits perplexity quantization vectorization eigenspace entropy enthalpy muon positron tachyon epistemic hermeneutic ontological epistemology teleology phenomenology bayesian markov fourier laplace hamiltonian lagrangian laplacian gaussian poisson sigmoid jacobian hessian centripetal coriolis zwitterion catalase hydrolysis osmosis oxidation meiosis mitosis allele nucleotide nucleoside nucleosome polypeptide covalent stoichiometry endothermic exothermic femur tibia patella ulna humerus humeral larynx pharynx trachea cochlea melanoma botulinum hippocampal thalamus myocardium emulsifier surfactant laminar rheology viscoelasticity kinematic kinematics stoichiometric chirality chiral enantiomer polymerase mutagen carcinogen teratogen nanomaterial photocatalysis electrochemical microcontroller phylogeny phylogenetic taxonomy taxonomic cladogram dendrogram cuda vllm nemotron bionemo proteina",
+  "exclude": "john smith roger graham teddy napoleon cadillac batman grinch goliath yankee gonna wanna gotta kinda sorta ain arent isnt dont didnt doesnt wasnt werent wouldnt couldnt shouldnt youve youll youre thats whats whos theres dontcha",
+  "variants": {
+    "colour": "color",
+    "coloured": "colored",
+    "colourful": "colorful",
+    "colourless": "colorless",
+    "behaviour": "behavior",
+    "behavioural": "behavioral",
+    "centre": "center",
+    "centred": "centered",
+    "metre": "meter",
+    "litre": "liter",
+    "centimetre": "centimeter",
+    "millimetre": "millimeter",
+    "kilometre": "kilometer",
+    "micrometre": "micrometer",
+    "nanometre": "nanometer",
+    "organisation": "organization",
+    "organise": "organize",
+    "organiser": "organizer",
+    "organisational": "organizational",
+    "analyse": "analyze",
+    "recognise": "recognize",
+    "realise": "realize",
+    "characterise": "characterize",
+    "specialise": "specialize",
+    "standardise": "standardize",
+    "normalise": "normalize",
+    "minimise": "minimize",
+    "maximise": "maximize",
+    "optimise": "optimize",
+    "optimisation": "optimization",
+    "randomise": "randomize",
+    "generalise": "generalize",
+    "generalisation": "generalization",
+    "synthesise": "synthesize",
+    "summarise": "summarize",
+    "summarisation": "summarization",
+    "emphasise": "emphasize",
+    "prioritise": "prioritize",
+    "visualise": "visualize",
+    "visualisation": "visualization",
+    "utilise": "utilize",
+    "utilisation": "utilization",
+    "favour": "favor",
+    "favourite": "favorite",
+    "honour": "honor",
+    "neighbour": "neighbor",
+    "flavour": "flavor",
+    "labour": "labor",
+    "labourer": "laborer",
+    "humour": "humor",
+    "rumour": "rumor",
+    "odour": "odor",
+    "valour": "valor",
+    "vigour": "vigor",
+    "glamour": "glamor",
+    "harbour": "harbor",
+    "armour": "armor",
+    "armoured": "armored",
+    "saviour": "savior",
+    "defence": "defense",
+    "offence": "offense",
+    "licence": "license",
+    "practise": "practice",
+    "theatre": "theater",
+    "catalogue": "catalog",
+    "dialogue": "dialog",
+    "grey": "gray",
+    "artefact": "artifact",
+    "mould": "mold",
+    "tyre": "tire",
+    "sulphur": "sulfur",
+    "sulphate": "sulfate",
+    "aluminium": "aluminum",
+    "programme": "program",
+    "plough": "plow",
+    "pyjamas": "pajamas",
+    "jewellery": "jewelry",
+    "jeweller": "jeweler",
+    "cheque": "check",
+    "kerb": "curb",
+    "storey": "story",
+    "sceptic": "skeptic",
+    "sceptical": "skeptical",
+    "scepticism": "skepticism",
+    "paediatric": "pediatric",
+    "paediatrician": "pediatrician",
+    "oestrogen": "estrogen",
+    "anaesthetic": "anesthetic",
+    "anaesthesia": "anesthesia",
+    "leukaemia": "leukemia"
+  },
+  "extra_forms": {
+    "api": [
+      "apis"
+    ],
+    "cafe": [
+      "cafes"
+    ],
+    "cellphone": [
+      "cellphones"
+    ],
+    "convergence": [
+      "convergences"
+    ],
+    "correlate": [
+      "correlates",
+      "correlated",
+      "correlating"
+    ],
+    "correlation": [
+      "correlations"
+    ],
+    "county": [
+      "counties"
+    ],
+    "cpu": [
+      "cpus"
+    ],
+    "dataset": [
+      "datasets"
+    ],
+    "dependency": [
+      "dependencies"
+    ],
+    "gpu": [
+      "gpus"
+    ],
+    "kilobyte": [
+      "kilobytes"
+    ],
+    "lab": [
+      "labs"
+    ],
+    "nanometer": [
+      "nanometers",
+      "nanometres"
+    ],
+    "pdf": [
+      "pdfs"
+    ],
+    "phd": [
+      "phds"
+    ],
+    "reflection": [
+      "reflections"
+    ],
+    "smartphone": [
+      "smartphones"
+    ],
+    "tradeoff": [
+      "tradeoffs"
+    ],
+    "trunk": [
+      "trunks"
+    ],
+    "tv": [
+      "tvs"
+    ],
+    "url": [
+      "urls"
+    ],
+    "website": [
+      "websites"
+    ],
+    "monday": [
+      "mondays"
+    ],
+    "tuesday": [
+      "tuesdays"
+    ],
+    "wednesday": [
+      "wednesdays"
+    ],
+    "thursday": [
+      "thursdays"
+    ],
+    "friday": [
+      "fridays"
+    ],
+    "saturday": [
+      "saturdays"
+    ],
+    "sunday": [
+      "sundays"
+    ]
+  }
+}

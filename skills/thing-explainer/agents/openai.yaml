@@ -1,8 +1,9 @@
 interface:
   display_name: Thing Explainer
-  short_description: Explain big ideas with Munroe’s simple-word list
-  default_prompt: Use $thing-explainer to explain this with only the bundled simple
-    words, keeping it clear, vivid, and accurate.
+  short_description: Explain research with a checked 15,000-lemma core
+  default_prompt: Use $thing-explainer to explain this with the embedded undergraduate
+    vocabulary, introducing necessary technical terms clearly and preserving scientific
+    detail.
   icon_small: assets/icon.svg
   icon_large: assets/icon.svg
 policy:
